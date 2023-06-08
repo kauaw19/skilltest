@@ -1,0 +1,106 @@
+@import url(//db.onlinewebfonts.com/c/ead4092f880f75ff0883ced1856b2c37?family=SF+Pro+Rounded);
+@font-face {
+  font-family: apple;
+  src: url("fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+}
+@font-face {
+  font-family: MyWebFont;
+  font-weight: bold;
+  src: url("fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+}
+* {
+  font-family: "MyWebFont";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.help-card {
+  padding-bottom: 245px;
+  position: relative;
+  border-radius: 25px;
+}
+.help-card__img {
+  position: absolute;
+  max-width: 350px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.help-card--bg-blue {
+  background: rgb(243, 248, 255);
+}
+.help-card--bg-pink {
+  background: linear-gradient(90deg, rgb(240, 223, 229) 0%, rgb(220, 221, 249) 100%);
+}
+
+.help-cards__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.help-cards__img-1 {
+  width: 320px;
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+}
+.help-cards__img-2 {
+  width: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+.help-cards__img-3 {
+  width: 370px;
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+}
+.help-cards__img-4 {
+  width: 380px;
+  bottom: 0;
+  position: absolute;
+  left: 10%;
+}
+.help-cards__link {
+  text-decoration: none;
+  font-family: "apple";
+  font-size: 16px;
+  padding: 20px;
+  color: black;
+}
+.help-cards__desc {
+  background: transparent;
+  padding: 20px;
+  font-family: "apple";
+  font-size: 18px;
+}
+.help-cards__title {
+  background: transparent;
+  padding: 20px;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    margin: 0 auto;
+    padding: 0;
+  }
+  .help-cards__container {
+    display: flex;
+    flex-flow: column;
+  }
+}/*# sourceMappingURL=help_cards.css.map */

@@ -1,0 +1,148 @@
+@import url(//db.onlinewebfonts.com/c/ead4092f880f75ff0883ced1856b2c37?family=SF+Pro+Rounded);
+
+@font-face {
+    font-family: apple;
+    src: url("fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+}
+
+@font-face {
+    font-family: MyWebFont;
+    font-weight: bold;
+    src: url("fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+}
+
+$color-1: rgb(243, 248, 255);
+$color-gradient-1: rgb(240, 223, 229);
+$color-gradient-2: rgb(220, 221, 249);
+$font-title: 'MyWebFont';
+$title-size: 35px;
+$font-desc: "apple";
+$desc-size: 18px;
+$title-weight: 400;
+$desc-weight: 200;
+$link-size: 16px;
+$font-link: 'apple';
+$padding-box: 20px;
+
+
+* {
+    font-family: $font-title;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.help-card {
+    padding-bottom: 245px;
+    position: relative;
+    border-radius: 25px;
+
+    &__img {
+        position: absolute;
+        max-width: 350px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &--bg-blue {
+
+        background: $color-1;
+    }
+
+
+    &--bg-pink {
+
+        background: linear-gradient(90deg, $color-gradient-1 0%, $color-gradient-2 100%);
+    }
+
+}
+
+
+
+.help-cards {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+
+    }
+
+    &__img-1 {
+        width: 320px;
+        position: absolute;
+        left: 10%;
+        bottom: 0;
+    }
+
+    &__img-2 {
+        width: 400px;
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+    }
+
+    &__img-3 {
+        width: 370px;
+        position: absolute;
+        left: 5%;
+        bottom: 0;
+    }
+
+    &__img-4 {
+        width: 380px;
+        bottom: 0;
+        position: absolute;
+        left: 10%
+    }
+
+    &__link {
+        text-decoration: none;
+        font-family: $font-link;
+        font-size: $link-size;
+        padding: 20px;
+        color: black;
+    }
+
+    &__desc {
+        background: transparent;
+        padding: $padding-box;
+        font-family: $font-desc;
+        font-size: $desc-size;
+    }
+
+    &__title {
+        background: transparent;
+        padding: $padding-box;
+        font-size: $title-size;
+        font-weight: $title-weight;
+
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .container {
+        margin: 0 auto;
+        padding: 0;
+        // max-width: 500px;
+    }
+
+    .help-cards {
+        &__container {
+            display: flex;
+            flex-flow: column;
+            // height: 500px;
+        }
+    }
+}
